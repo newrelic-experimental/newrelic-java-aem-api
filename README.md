@@ -15,39 +15,36 @@
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/newrelic-experimental/newrelic-java-aem-api)
 ![GitHub pull requests closed](https://img.shields.io/github/issues-pr-closed/newrelic-experimental/newrelic-java-aem-api)
 
-    # New Relic Java Instrumentation for Adobe AEM
+# New Relic Java Instrumentation for Adobe AEM
     
-    Provides instrumentation for the Adobe AEM framework.
+Provides instrumentation for the Adobe AEM framework.   
     
+## Installation
     
+This use this instrumentation.   
+1. Download the latest release.    
+2. In the New Relic Java Agent directory (directory containing newrelic.jar), create a directory named extensions if it doe not already exist.   
+3. Copy the jars into the extensions directory.    
+4. Restart the application.
     
-    ## Installation
+## Getting Started
     
-    This use this instrumentation.   
-    1. Download the latest release.    
-    2. In the New Relic Java Agent directory (directory containing newrelic.jar), create a directory named extensions if it doe not already exist.   
-    3. Copy the jars into the extensions directory.    
-    4. Restart the application.
+After deployment, you should be able to see parts of your Apache Sling flows showing up in transaction traces.
     
+## Building
     
-    ## Getting Started
-    
-    After deployment, you should be able to see parts of your Apache Sling flows showing up in transaction traces.
-    
-    ## Building
-    
-    If you make changes to the instrumentation code and need to build the instrumentation jars, follow these steps
+If you make changes to the instrumentation code and need to build the instrumentation jars, follow these steps   
     1. Set environment variable NEW_RELIC_EXTENSIONS_DIR.  Its value should be the directory where you want to build the jars (i.e. the extensions directory of the Java Agent).   
     2. Build one or all of the jars.   
-    a. To build one jar, run the command:  gradlew _moduleName_:clean  _moduleName_:install    
-    b. To build all jars, run the command: gradlew clean install
-    3. Restart the application
+      a. To build one jar, run the command:  gradlew _moduleName_:clean  _moduleName_:install    
+      b. To build all jars, run the command: gradlew clean install   
+    3. Restart the application   
     
-    ## Support
+## Support
     
-    New Relic has open-sourced this project. This project is provided AS-IS WITHOUT WARRANTY OR DEDICATED SUPPORT. Issues and contributions should be reported to the project here on GitHub.
+New Relic has open-sourced this project. This project is provided AS-IS WITHOUT WARRANTY OR DEDICATED SUPPORT. Issues and contributions should be reported to the project here on GitHub.
     
-    >We encourage you to bring your experiences and questions to the [Explorers Hub](https://discuss.newrelic.com) where our community members collaborate on solutions and new ideas.
+>We encourage you to bring your experiences and questions to the [Explorers Hub](https://discuss.newrelic.com) where our community members collaborate on solutions and new ideas.
 
 ## Contributing
 
