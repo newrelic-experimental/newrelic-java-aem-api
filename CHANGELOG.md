@@ -1,3 +1,6 @@
+## Version: [v1.0.0](https://github.com/newrelic-experimental/newrelic-java-aem-api/releases/tag/v1.0.0) | Created: 2024-03-12
+
+
 ## Installation
 
 To install:
