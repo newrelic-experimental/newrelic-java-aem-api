@@ -1,1 +1,4 @@
 rootProject.name = 'java-instrumentation-template'
+include 'aem-day-api'
+include 'aem-adobe-api'
+include 'aem-adobe-commerce'
