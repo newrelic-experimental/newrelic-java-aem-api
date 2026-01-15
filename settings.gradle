@@ -1,4 +1,6 @@
-rootProject.name = 'java-instrumentation-template'
+rootProject.name = 'aem-api-instrumentation'
 include 'aem-day-api'
 include 'aem-adobe-api'
 include 'aem-adobe-commerce'
+include 'aem-adobe-commerce-aem-api'
+include 'aem-adobe-commerce-uber'

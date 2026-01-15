@@ -4,6 +4,7 @@ import java.util.Map;
 
 import com.adobe.cq.commerce.api.Product;
 import com.adobe.cq.commerce.api.promotion.Promotion;
+import com.day.cq.wcm.api.Page;
 
 public class Utils {
 
@@ -30,4 +31,17 @@ public class Utils {
 		}
 	}
 	
+	public static void addPage(Map<String, Object> attributes, Page page) {
+		if(page != null) {
+			addPage(attributes, page, null);
+		}
+	}
+	
+	public static void addPage(Map<String, Object> attributes, Page page, String prefix) {
+		if(page != null) {
+			addAttribute(attributes, prefix != null ? prefix + "-Page-Name" : "Page-Name", page.getName());
+			addAttribute(attributes, prefix != null ? prefix + "-Page-Path" : "Page-Path", page.getPath());
+			addAttribute(attributes, prefix != null ? prefix + "-Page-Title" : "Page-Title", page.getPageTitle());
+		}
+	}
 }
