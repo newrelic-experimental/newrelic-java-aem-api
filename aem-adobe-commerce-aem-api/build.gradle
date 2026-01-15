@@ -1,11 +1,10 @@
 
-// Build.gradle generated for instrumentation module aem-adobe-api
+// Build.gradle generated for instrumentation module aem-adobe-commerce
 
 apply plugin: 'java'
 
 dependencies {
    implementation 'com.adobe.aem:aem-api:6.0.0.1'
-
 
    // New Relic Java Agent dependencies
    implementation 'com.newrelic.agent.java:newrelic-agent:6.4.0'
@@ -16,7 +15,7 @@ dependencies {
 
 jar {
   manifest {
-    attributes 'Implementation-Title': 'com.newrelic.instrumentation.labs.aem-adobe-api'
+    attributes 'Implementation-Title': 'com.newrelic.instrumentation.labs.aem-adobe-commerce-aem-api'
     attributes 'Implementation-Vendor': 'New Relic Labs'
     attributes 'Implementation-Vendor-Id': 'com.newrelic.labs'
     attributes 'Implementation-Version': 1.0
@@ -24,6 +23,7 @@ jar {
 }
 
 verifyInstrumentation {
-	passes 'com.adobe.aem:uber-jar:[6.5.6,6.6.0)'
-    passes 'com.adobe.aem:uber-jar:(6.6.0,)'
+  passes 'com.adobe.aem:aem-api:[6.0.0.1,)'
+  excludeRegex '.*beta'
+  excludeRegex '.*beta[0-9]'
 }
